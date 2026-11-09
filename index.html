@@ -1,0 +1,1204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}</style>
+<title>Maser Global Impex</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Maser Global Impex — international trade in chemicals, minerals, petrochemicals and edible oils. Based in Vancouver, BC, Canada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a working trade house — shipping-manifest panels, HS-code labels and placard-diamond markers; hash-routed pages under one sticky header */
+:root{
+  --paper:#F2F4F3; --surface:#FFFFFF; --wash:#E3EBE9; --ink:#0D1E24; --muted:#55666B; --line:#D3DBD9;
+  --teal:#0C6466; --on-teal:#FFFFFF; --amber:#B9780F; --deep:#0D1E24; --on-deep:#E6EEEC; --deep-muted:#8FA3A6;
+  --wa:#1F8F4E;
+  --f-display:"Archivo", "Arial Narrow", system-ui, sans-serif;
+  --f-body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --s1:.8125rem; --s2:.9375rem; --s3:1.0625rem; --s4:1.375rem; --s5:clamp(1.6rem,3vw,2.25rem); --s6:clamp(2.2rem,5.2vw,3.9rem);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0A1417; --surface:#101E22; --wash:#13262A; --ink:#E5EDEB; --muted:#93A5A8; --line:#223539;
+  --teal:#45B2AC; --on-teal:#04201F; --amber:#E2A740; --deep:#060E10; --on-deep:#E5EDEB; --deep-muted:#8094A0; --wa:#34B36A; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#0A1417; --surface:#101E22; --wash:#13262A; --ink:#E5EDEB; --muted:#93A5A8; --line:#223539;
+  --teal:#45B2AC; --on-teal:#04201F; --amber:#E2A740; --deep:#060E10; --on-deep:#E5EDEB; --deep-muted:#8094A0; --wa:#34B36A; color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--s2);line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--surface)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:2px}
+h1,h2,h3,h4{font-family:var(--f-display);font-stretch:112%;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:clamp(56px,8vw,96px)}
+.band.tight{padding-block:clamp(40px,5vw,64px)}
+.eyebrow{font-family:var(--f-mono);font-size:var(--s1);letter-spacing:.12em;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:9px;height:9px;border:1.5px solid currentColor;transform:rotate(45deg)}
+.lede{font-size:var(--s3);color:var(--muted);max-width:62ch}
+.head{display:grid;gap:14px;margin-bottom:40px;max-width:760px}
+.head h2{font-size:var(--s5)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:650;font-stretch:105%;font-size:var(--s2);padding:13px 22px;border-radius:3px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .15s, background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:var(--teal);color:var(--on-teal)}
+.btn.ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn.wa{background:var(--wa);color:#fff}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+
+/* Topbar + header */
+.topbar{background:var(--deep);color:var(--on-deep);font-size:var(--s1)}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-block:8px;flex-wrap:wrap}
+.topbar span{color:var(--deep-muted)} .topbar b{color:var(--on-deep);font-weight:500}
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--surface);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-mark{width:44px;height:44px;display:grid;place-items:center;background:var(--teal);color:var(--on-teal);font-family:var(--f-display);font-weight:800;font-stretch:80%;font-size:1.05rem;letter-spacing:.02em;border-radius:3px}
+.logo-text b{display:block;font-family:var(--f-display);font-stretch:115%;font-weight:750;font-size:1.05rem;line-height:1.1}
+.logo-text small{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+nav.main{display:flex;align-items:center;gap:4px}
+nav.main a{text-decoration:none;font-weight:500;padding:8px 12px;border-radius:3px;color:var(--muted)}
+nav.main a:hover{color:var(--ink);background:var(--wash)}
+nav.main a[aria-current="page"]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--teal)}
+nav.main a.cta{background:var(--teal);color:var(--on-teal);margin-left:8px;box-shadow:none}
+.menu-btn{display:none;background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:3px;padding:8px 12px;font:600 var(--s1) var(--f-mono);letter-spacing:.08em;cursor:pointer}
+@media (max-width:1100px){
+  .menu-btn{display:block}
+  nav.main{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;background:var(--surface);border-bottom:1px solid var(--line);padding:8px max(16px,env(safe-area-inset-right,0px)) 16px max(16px,env(safe-area-inset-left,0px));display:none}
+  nav.main.open{display:flex}
+  nav.main a{padding:12px}
+  nav.main a.cta{margin:8px 0 0;text-align:center}
+}
+
+/* Pages */
+.page{display:none}
+.page.active{display:block;animation:in .35s ease-out}
+@keyframes in{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* Hero */
+.hero{background:var(--wash);border-bottom:1px solid var(--line);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,64px);align-items:center;padding-block:clamp(48px,7vw,88px)}
+.hero h1{font-size:var(--s6);font-weight:780;font-stretch:118%}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero-copy{display:grid;gap:22px;min-width:0}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.06em;border:1px solid var(--line);background:var(--surface);padding:5px 10px;border-radius:2px;color:var(--muted)}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+
+/* Manifest card */
+.manifest{background:var(--surface);border:1px solid var(--line);border-radius:4px;font-size:var(--s1);box-shadow:0 18px 40px -24px rgba(13,30,36,.35);min-width:0}
+.manifest-top{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px dashed var(--line);gap:12px}
+.manifest-top b{font-family:var(--f-display);font-stretch:110%;font-size:var(--s2)}
+.status{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:2px;background:var(--teal);color:var(--on-teal);white-space:nowrap}
+.manifest dl{display:grid;grid-template-columns:1fr 1fr;margin:0}
+.manifest dl div{padding:12px 18px;border-bottom:1px solid var(--line);min-width:0}
+.manifest dl div:nth-child(odd){border-right:1px solid var(--line)}
+.manifest dt{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.manifest dd{margin:2px 0 0;font-weight:600;overflow-wrap:anywhere}
+.route{padding:16px 18px 18px}
+.route-line{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:10px}
+.route-line i{height:6px;background:var(--line);border-radius:1px}
+.route-line i.on{background:var(--teal)}
+.route-line i.now{background:var(--amber)}
+.route-labels{display:flex;justify-content:space-between;margin-top:8px;font-family:var(--f-mono);font-size:.7rem;color:var(--muted)}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line);background:var(--surface)}
+.stats div{padding:28px 20px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-family:var(--f-display);font-stretch:85%;font-weight:750;font-size:clamp(2rem,4vw,2.9rem);line-height:1;font-variant-numeric:tabular-nums}
+.stats span{color:var(--muted);font-size:var(--s1)}
+@media (max-width:700px){.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* Division grid */
+.div-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.div-card{background:var(--surface);padding:28px;display:grid;gap:12px;align-content:start;text-decoration:none;transition:background .15s;cursor:pointer;border:0;text-align:left;font:inherit;color:inherit}
+.div-card:hover{background:var(--wash)}
+.div-card h3{font-size:var(--s4)}
+.div-card p{color:var(--muted)}
+.code{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;color:var(--amber);display:flex;align-items:center;gap:8px}
+.code::before{content:"";width:8px;height:8px;background:currentColor;transform:rotate(45deg)}
+.div-card .more{font-family:var(--f-mono);font-size:var(--s1);color:var(--teal);margin-top:6px}
+@media (max-width:900px){.div-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.div-grid{grid-template-columns:1fr}}
+
+/* Split / features */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:start}
+.split > *{min-width:0}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+.prose{display:grid;gap:16px;color:var(--muted);font-size:var(--s3);max-width:62ch}
+.prose strong{color:var(--ink);font-weight:600}
+.feature-list{display:grid;gap:0;border-top:1px solid var(--line)}
+.feature-list div{display:grid;grid-template-columns:180px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.feature-list h4{font-size:var(--s3);font-stretch:105%}
+.feature-list p{color:var(--muted)}
+@media (max-width:560px){.feature-list div{grid-template-columns:1fr;gap:4px}}
+
+/* Advantage */
+.adv{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.adv article{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:28px;display:grid;gap:10px}
+.adv h3{font-size:var(--s4)}
+.adv p{color:var(--muted)}
+@media (max-width:760px){.adv{grid-template-columns:1fr}}
+
+/* Certs */
+.certs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cert{border:1.5px solid var(--ink);border-radius:3px;padding:22px;display:grid;gap:8px;background:var(--surface)}
+.cert b{font-family:var(--f-display);font-stretch:90%;font-size:1.5rem;font-weight:780}
+.cert p{color:var(--muted);font-size:var(--s1)}
+@media (max-width:900px){.certs{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.certs{grid-template-columns:1fr}}
+
+/* Process */
+.process{display:grid;grid-template-columns:repeat(6,1fr);gap:0;counter-reset:step}
+.step{padding:24px 18px 24px 0;border-top:3px solid var(--teal);display:grid;gap:8px;align-content:start;margin-right:12px}
+.step .n{font-family:var(--f-mono);font-size:var(--s1);color:var(--teal)}
+.step h4{font-size:var(--s3);font-stretch:105%}
+.step p{color:var(--muted);font-size:var(--s1)}
+@media (max-width:1000px){.process{grid-template-columns:repeat(3,1fr);row-gap:20px}}
+@media (max-width:560px){.process{grid-template-columns:1fr}}
+
+/* CTA band */
+.cta-band{background:var(--deep);color:var(--on-deep)}
+.cta-band .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-block:clamp(44px,6vw,72px)}
+.cta-band h2{font-size:var(--s5);max-width:22ch}
+.cta-band p{color:var(--deep-muted);margin-top:10px}
+.cta-band .btn.ghost{border-color:var(--on-deep);color:var(--on-deep)}
+
+/* Page header */
+.page-head{background:var(--wash);border-bottom:1px solid var(--line)}
+.page-head .wrap{padding-block:clamp(44px,6vw,72px);display:grid;gap:16px}
+.page-head h1{font-size:var(--s6);font-weight:760;max-width:20ch}
+.crumbs{font-family:var(--f-mono);font-size:var(--s1);color:var(--muted)}
+.crumbs a{text-decoration:none;color:var(--teal)}
+
+/* Products page */
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:28px}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters button{font:500 var(--s1) var(--f-body);border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:2px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.search{margin-left:auto;flex:1 1 220px;max-width:320px}
+.search input{width:100%;font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:2px;background:var(--surface);color:var(--ink)}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:20px}
+.cat{background:var(--surface);border:1px solid var(--line);border-radius:4px;display:flex;flex-direction:column}
+.cat header{padding:22px 22px 16px;border-bottom:1px solid var(--line);display:grid;gap:8px}
+.cat h3{font-size:var(--s4)}
+.cat header p{color:var(--muted);font-size:var(--s1)}
+.cat ul{list-style:none;margin:0;padding:6px 0;flex:1}
+.cat li{display:flex;justify-content:space-between;gap:12px;padding:9px 22px;border-bottom:1px dashed var(--line)}
+.cat li:last-child{border-bottom:0}
+.cat li span.mono{color:var(--muted);font-size:.72rem;white-space:nowrap}
+.cat li mark{background:color-mix(in srgb,var(--amber) 30%,transparent);color:inherit}
+.cat footer{padding:14px 22px;border-top:1px solid var(--line)}
+.cat footer button{background:none;border:0;padding:0;color:var(--teal);font:600 var(--s1) var(--f-mono);cursor:pointer}
+.empty{padding:40px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:4px}
+.note{font-size:var(--s1);color:var(--muted);margin-top:24px}
+
+/* Services */
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc{background:var(--surface);padding:30px;display:grid;grid-template-columns:auto 1fr;gap:6px 20px}
+.svc .tag{grid-row:span 2;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;color:var(--amber);border:1px solid var(--amber);height:fit-content;padding:4px 7px;border-radius:2px}
+.svc h3{font-size:var(--s4)}
+.svc p{color:var(--muted)}
+@media (max-width:760px){.svc-grid{grid-template-columns:1fr}}
+.terms{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+
+/* Markets */
+.mkt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:16px}
+.mkt{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:3px;padding:20px 22px;display:grid;gap:10px}
+.mkt h3{font-size:var(--s3);font-stretch:108%;display:flex;justify-content:space-between;gap:10px}
+.mkt h3 span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);font-weight:400}
+.mkt ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px}
+.mkt li{font-size:var(--s1);background:var(--wash);padding:3px 9px;border-radius:2px}
+.hub{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:clamp(24px,4vw,40px);margin-bottom:40px}
+.hub > *{min-width:0}
+@media (max-width:760px){.hub{grid-template-columns:1fr}}
+.lanes{display:grid;gap:10px}
+.lane{display:grid;grid-template-columns:120px 1fr auto;gap:12px;align-items:center;font-size:var(--s1)}
+.lane .bar{height:8px;background:var(--wash);border-radius:1px;overflow:hidden}
+.lane .bar i{display:block;height:100%;background:var(--teal)}
+.lane .mono{color:var(--muted)}
+
+/* FAQ */
+.faq{display:grid;gap:0;border-top:1px solid var(--line);max-width:880px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;position:relative;font-family:var(--f-display);font-stretch:105%;font-weight:600;font-size:var(--s3)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:18px;font-family:var(--f-mono);font-size:1.4rem;color:var(--teal);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--muted);max-width:68ch}
+.faq-cats{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:24px}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,64px);align-items:start}
+.contact-grid > *{min-width:0}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.info{display:grid;gap:0;border-top:1px solid var(--line)}
+.info div{padding:18px 0;border-bottom:1px solid var(--line);display:grid;gap:4px}
+.info dt{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.info dd{margin:0;font-weight:600;font-size:var(--s3);display:flex;align-items:center;gap:10px;flex-wrap:wrap;overflow-wrap:anywhere}
+.copy{font:500 .72rem var(--f-mono);border:1px solid var(--line);background:var(--surface);color:var(--muted);padding:3px 8px;border-radius:2px;cursor:pointer}
+form.quote{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:clamp(22px,4vw,36px);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form.quote h3{grid-column:1/-1;font-size:var(--s4)}
+form.quote .full{grid-column:1/-1}
+.field{display:grid;gap:6px;min-width:0}
+.field label{font-size:var(--s1);font-weight:600}
+.field label small{font-weight:400;color:var(--muted)}
+.field input,.field select,.field textarea{font:inherit;width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:2px;background:var(--paper);color:var(--ink)}
+.field textarea{min-height:120px;resize:vertical}
+.field input:invalid:not(:placeholder-shown){border-color:var(--amber)}
+@media (max-width:560px){form.quote{grid-template-columns:1fr}}
+.form-result{grid-column:1/-1;background:var(--wash);border:1px solid var(--line);border-radius:3px;padding:18px;display:grid;gap:12px}
+.form-result pre{margin:0;white-space:pre-wrap;font:var(--s1)/1.5 var(--f-mono);max-height:180px;overflow:auto}
+.form-actions{display:flex;gap:10px;flex-wrap:wrap}
+.err{grid-column:1/-1;color:var(--amber);font-size:var(--s1);font-weight:600}
+
+/* Footer */
+footer.site{background:var(--deep);color:var(--on-deep)}
+footer.site .wrap{padding-block:56px 28px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+@media (max-width:860px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.foot-grid{grid-template-columns:1fr}}
+.foot-grid h5{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--deep-muted);margin:0 0 14px;font-weight:500}
+.foot-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.foot-grid a{text-decoration:none;color:var(--on-deep);opacity:.85}
+.foot-grid a:hover{opacity:1;text-decoration:underline}
+.foot-grid p{color:var(--deep-muted);max-width:36ch;margin-top:14px}
+.foot-grid .logo-mark{background:var(--teal);color:var(--on-teal)}
+.foot-grid .logo-text small{color:var(--deep-muted)}
+.foot-bottom{margin-top:44px;padding-top:20px;border-top:1px solid rgba(143,163,166,.25);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:var(--s1);color:var(--deep-muted)}
+
+/* ===== Food division tokens ===== */
+:root{--cane:#7B4518; --on-cane:#FFFFFF; --leaf:#3E6A2C; --cane-wash:#F3EADF; --cane-line:#E2D2BE; --pack-org:#EFE4CF; --pack-brn:#5A3214}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--cane:#D89A5B; --on-cane:#2A1606; --leaf:#93C275; --cane-wash:#1C1610; --cane-line:#3A2C1E; --pack-org:#E9DCC2; --pack-brn:#6A3C18}}
+:root[data-theme="dark"]{--cane:#D89A5B; --on-cane:#2A1606; --leaf:#93C275; --cane-wash:#1C1610; --cane-line:#3A2C1E; --pack-org:#E9DCC2; --pack-brn:#6A3C18}
+
+/* ===== 3D ===== */
+.tilt{transition:transform .25s ease-out, background .15s, box-shadow .25s;transform-style:preserve-3d;will-change:transform}
+.tilt.tilting{box-shadow:0 24px 44px -28px rgba(13,30,36,.5)}
+.hero-stage{position:relative;min-height:500px;min-width:0}
+#globe{position:absolute;inset:0;width:100%;height:100%;cursor:grab;touch-action:pan-y}
+#globe:active{cursor:grabbing}
+.globe-legend{position:absolute;top:0;right:0;display:grid;gap:6px;font-size:.7rem;color:var(--muted);text-align:right}
+.globe-legend span{display:flex;gap:8px;align-items:center;justify-content:flex-end}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.dot.hub{background:var(--amber)} .dot.lane{background:var(--teal)}
+.manifest.float{position:absolute;left:0;bottom:6px;width:min(330px,92%);transform:perspective(1000px) rotateY(14deg) rotateX(6deg);transform-origin:left center;animation:bob 6s ease-in-out infinite}
+@keyframes bob{50%{transform:perspective(1000px) rotateY(10deg) rotateX(4deg) translateY(-8px)}}
+.manifest.float dl div{padding:9px 16px}
+@media (max-width:900px){
+  .hero-stage{min-height:0;display:grid;gap:16px}
+  #globe{position:relative;inset:auto;height:min(92vw,420px)}
+  .globe-legend{position:static;text-align:left}.globe-legend span{justify-content:flex-start}
+  .manifest.float{position:relative;transform:none;animation:none;width:100%}
+}
+
+/* Twin divisions */
+.twin{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.twin-card{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:4px;padding:clamp(24px,4vw,36px);display:grid;gap:14px;align-content:start}
+.twin-card h3{font-size:var(--s5)}
+.twin-card p{color:var(--muted)}
+.twin-card .btn{justify-self:start;margin-top:6px}
+.twin-card.food{border-top-color:var(--cane);background:var(--cane-wash);border-color:var(--cane-line)}
+.food-code{color:var(--cane)}
+.btn.cane{background:var(--cane);color:var(--on-cane)}
+@media (max-width:760px){.twin{grid-template-columns:1fr}}
+
+/* Food page */
+.food-page .eyebrow.food-eyebrow{color:var(--cane)}
+.food-hero{background:var(--cane-wash);border-bottom:1px solid var(--cane-line);overflow:hidden}
+.food-hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,60px);align-items:center;padding-block:clamp(44px,6vw,80px)}
+.food-hero h1{font-size:var(--s6);font-weight:780}
+.food-sub{font-family:var(--f-display);font-stretch:105%;font-size:var(--s4);color:var(--cane);font-weight:600}
+@media (max-width:900px){.food-hero .wrap{grid-template-columns:1fr}}
+.pack-scene{position:relative;height:400px;perspective:1200px;display:flex;justify-content:center;align-items:center;gap:clamp(28px,6vw,64px);min-width:0}
+.pack{--w:160px;--h:224px;--d:58px;width:var(--w);height:var(--h);position:relative;transform-style:preserve-3d;animation:sway 9s ease-in-out infinite}
+.pack.brown{animation-delay:-4.5s;--w:170px;--h:240px;--d:64px}
+@keyframes sway{0%,100%{transform:rotateX(-10deg) rotateY(-32deg)}50%{transform:rotateX(-6deg) rotateY(28deg) translateY(-10px)}}
+.face{position:absolute;backface-visibility:hidden;border-radius:3px;overflow:hidden}
+.face.front,.face.back{width:var(--w);height:var(--h)}
+.face.front{transform:translateZ(calc(var(--d) / 2))}
+.face.back{transform:rotateY(180deg) translateZ(calc(var(--d) / 2))}
+.face.right,.face.left{width:var(--d);height:var(--h);left:calc((var(--w) - var(--d)) / 2)}
+.face.right{transform:rotateY(90deg) translateZ(calc(var(--w) / 2))}
+.face.left{transform:rotateY(-90deg) translateZ(calc(var(--w) / 2))}
+.face.top,.face.bottom{width:var(--w);height:var(--d);top:calc((var(--h) - var(--d)) / 2)}
+.face.top{transform:rotateX(90deg) translateZ(calc(var(--h) / 2))}
+.face.bottom{transform:rotateX(-90deg) translateZ(calc(var(--h) / 2))}
+.pack.organic .face{background:var(--pack-org);color:#2B1A0C}
+.pack.organic .face.right,.pack.organic .face.left{background:#DCCDB0}
+.pack.organic .face.top{background:#F6EEDD}
+.pack.brown .face{background:var(--pack-brn);color:#F5E7D3}
+.pack.brown .face.right,.pack.brown .face.left{background:#43240E}
+.pack.brown .face.top{background:#704220}
+.pk-band{font:600 .6rem/1 var(--f-mono);letter-spacing:.14em;padding:9px 10px;text-align:center}
+.pack.organic .pk-band{background:#3E6A2C;color:#F4F0E4}
+.pack.brown .pk-band{background:#C9891A;color:#2B1606}
+.pk-body{padding:14px 12px;display:grid;gap:6px;text-align:center;height:calc(100% - 28px);align-content:center}
+.pk-body small{font:500 .56rem/1.3 var(--f-mono);letter-spacing:.06em;opacity:.8}
+.pk-body b{font-family:var(--f-display);font-stretch:95%;font-weight:780;font-size:1.15rem;line-height:1.05}
+.pk-body i{font-size:.68rem;opacity:.85}
+.pk-wt{font-family:var(--f-display);font-stretch:80%;font-weight:800;font-size:2.4rem;line-height:1;margin:6px 0}
+.nf{display:block;height:5px;background:currentColor;opacity:.25;border-radius:1px}
+.nf.short{width:60%}
+.pack-shadow{position:absolute;bottom:34px;left:15%;right:15%;height:24px;background:radial-gradient(closest-side,rgba(60,30,10,.35),transparent);filter:blur(2px)}
+@media (max-width:560px){.pack-scene{height:320px;gap:20px}.pack{--w:120px;--h:170px;--d:44px}.pack.brown{--w:128px;--h:180px;--d:48px}.pk-body b{font-size:.9rem}.pk-wt{font-size:1.8rem}}
+@media (prefers-reduced-motion:reduce){.pack{transform:rotateX(-8deg) rotateY(-24deg)}.pack.brown{transform:rotateX(-8deg) rotateY(20deg)}}
+
+.uses{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.use{background:var(--surface);border:1px solid var(--cane-line);border-radius:4px;padding:20px;display:grid;gap:4px}
+.use b{font-family:var(--f-display);font-stretch:108%;font-size:var(--s4);color:var(--cane)}
+.use span{color:var(--muted);font-size:var(--s1)}
+@media (max-width:420px){.uses{grid-template-columns:1fr}}
+.food-band{background:var(--cane-wash);border-block:1px solid var(--cane-line)}
+.jag-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:960px){.jag-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.jag-grid{grid-template-columns:1fr}}
+.jag{background:var(--surface);border:1px solid var(--cane-line);border-radius:4px;display:flex;flex-direction:column}
+.jag.organic-c{border-top:4px solid var(--leaf)} .jag.brown-c{border-top:4px solid var(--cane)}
+.jag.soon{border-style:dashed;background:transparent}
+.jag-top{padding:24px;display:grid;gap:8px}
+.jag h3{font-size:var(--s4)}
+.jag-top p{color:var(--muted)}
+.jag dl{margin:0;border-top:1px solid var(--cane-line)}
+.jag dl div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:12px 24px;border-bottom:1px dashed var(--cane-line)}
+.jag dt{font:500 .7rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+.jag dd{margin:0;font-weight:500}
+.link-btn{margin:auto 24px 22px;padding-top:16px;background:none;border:0;color:var(--cane);font:600 var(--s1) var(--f-mono);cursor:pointer;text-align:left}
+.checks{list-style:none;padding:0;margin:0;display:grid;border-top:1px solid var(--line)}
+.checks li{padding:15px 0 15px 34px;border-bottom:1px solid var(--line);position:relative;font-weight:500}
+.checks li::before{content:"";position:absolute;left:4px;top:19px;width:14px;height:8px;border-left:2.5px solid var(--leaf);border-bottom:2.5px solid var(--leaf);transform:rotate(-45deg)}
+.pack-opts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pack-opts > div{background:var(--surface);border:1px solid var(--cane-line);border-radius:4px;padding:22px;display:grid;gap:8px}
+.pack-opts b{font-size:var(--s4)}
+.pack-opts p{color:var(--muted);font-size:var(--s1)}
+@media (max-width:420px){.pack-opts{grid-template-columns:1fr}}
+.buyers{display:flex;flex-wrap:wrap;gap:10px}
+.buyers span{background:var(--surface);border:1px solid var(--cane-line);padding:10px 16px;border-radius:3px;font-weight:600;font-family:var(--f-display);font-stretch:105%}
+fieldset.needs{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px 18px}
+fieldset.needs legend{font-size:var(--s1);font-weight:600;margin-bottom:6px;width:100%}
+fieldset.needs label{display:flex;gap:8px;align-items:center;font-size:var(--s2)}
+fieldset.needs input{accent-color:var(--cane);width:16px;height:16px}
+
+/* Floating WhatsApp */
+.wa-float{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:70;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;padding:12px 18px 12px 14px;border-radius:999px;font-weight:600;font-size:var(--s1);box-shadow:0 10px 28px -10px rgba(0,0,0,.45)}
+.wa-float svg{width:22px;height:22px}
+@media (max-width:520px){.wa-float span{display:none}.wa-float{padding:14px}}
+</style>
+</head>
+<body>
+
+
+<div class="topbar"><div class="wrap">
+  <span>Trusted supplier across <b>40+ countries</b> · <b>ISO 9001:2015</b> certified</span>
+  <span>Vancouver, BC, Canada · <b class="mono" data-wa-display></b></span>
+</div></div>
+
+<header class="site"><div class="wrap">
+  <a class="logo" href="#home" aria-label="Maser Global Impex home">
+    <span class="logo-mark">MGI</span>
+    <span class="logo-text"><b>Maser Global Impex</b><small>International Trade Solutions</small></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">MENU</button>
+  <nav class="main" id="mainNav">
+    <a href="#home">Home</a>
+    <a href="#food">Food &amp; Agri</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#services">Services</a>
+    <a href="#markets">Markets</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="cta">Get a Quote</a>
+  </nav>
+</div></header>
+
+<main>
+<!-- HOME -->
+<section class="page" data-page="home">
+  <div class="hero"><div class="wrap">
+    <div class="hero-copy">
+      <div class="eyebrow">Global trade since 2005</div>
+      <h1>Premium chemicals &amp; commodities, <em>moved across the world</em> with paperwork done right.</h1>
+      <p class="lede">Maser Global Impex is an international trade partner for chemicals, minerals, metallurgy, petrochemicals and edible oils. We source from verified manufacturers, inspect every lot, and deliver with full compliance documentation.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#products">Explore products →</a>
+        <a class="btn ghost" href="#contact">Request a quote</a>
+      </div>
+      <div class="chips"><span class="chip">ISO 9001:2015</span><span class="chip">REACH</span><span class="chip">GHS / SDS</span><span class="chip">IMDG</span></div>
+    </div>
+    <div class="hero-stage" id="heroStage">
+      <canvas id="globe" aria-label="3D globe showing trade routes from Vancouver to world markets" role="img"></canvas>
+      <div class="globe-legend mono"><span><i class="dot hub"></i>Vancouver hub</span><span><i class="dot lane"></i>Active trade lanes</span></div>
+      <aside class="manifest float" aria-label="Example shipment record">
+        <div class="manifest-top"><b>Shipment MGI-24-0817</b><span class="status">In transit</span></div>
+        <dl>
+          <div><dt>Commodity</dt><dd>RBD Palm Olein</dd></div>
+          <div><dt>HS Code</dt><dd class="mono">1511.90</dd></div>
+          <div><dt>Quantity</dt><dd class="mono">100 MT · 5×20′</dd></div>
+          <div><dt>Incoterm</dt><dd class="mono">CIF</dd></div>
+        </dl>
+        <div class="route">
+          <span class="mono" style="font-size:.68rem;letter-spacing:.1em;color:var(--muted)">STAGE 5 OF 6 · SHIP &amp; DOCUMENT</span>
+          <div class="route-line"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="now"></i><i></i></div>
+        </div>
+      </aside>
+    </div>
+  </div></div>
+
+  <div class="stats wrap" style="padding:0">
+    <div><b>40+</b><span>Countries served</span></div>
+    <div><b>500+</b><span>Product categories</span></div>
+    <div><b>1,200+</b><span>Clients served</span></div>
+    <div><b>98%</b><span>On-time delivery</span></div>
+  </div>
+
+  <section class="band tight"><div class="wrap">
+    <div class="head"><div class="eyebrow">Our divisions</div><h2>Two divisions, one trusted supply chain</h2></div>
+    <div class="twin">
+      <article class="twin-card tilt">
+        <span class="code">Division 01</span>
+        <h3>Chemicals &amp; Commodities</h3>
+        <p>Chemicals, specialty chemicals, paints and coatings, minerals and metallurgy, petrochemicals and edible oils, supplied to 40+ countries for over 20 years.</p>
+        <a class="btn primary" href="#products">Explore products →</a>
+      </article>
+      <article class="twin-card food tilt">
+        <span class="code food-code">Division 02 · New</span>
+        <h3>Food &amp; Agri Commodities</h3>
+        <p>Maser Global Impex now supplies food and agri products from India to Canada and worldwide, starting with premium jaggery powder.</p>
+        <p>Our first range is organic and traditional jaggery powder, sourced directly from India, lab tested, and packed for retail, food service and bulk buyers.</p>
+        <a class="btn cane" href="#food">Explore food products →</a>
+      </article>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Product divisions</div>
+      <h2>Hundreds of commodities. One trusted source.</h2>
+      <p class="lede">Every product line is backed by certified quality control and transparent documentation.</p>
+    </div>
+    <div class="div-grid" id="homeDivisions"></div>
+  </div></section>
+
+  <section class="band" style="background:var(--surface);border-block:1px solid var(--line)"><div class="wrap split">
+    <div class="head" style="margin:0">
+      <div class="eyebrow">Why Maser</div>
+      <h2>The Maser advantage</h2>
+      <p class="lede">Two decades of hands-on trade experience, a supplier network we audit ourselves, and pricing built on direct manufacturer relationships.</p>
+      <div style="margin-top:12px"><a class="btn ghost" href="#about">About the company →</a></div>
+    </div>
+    <div class="feature-list" id="advList"></div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="head">
+      <div class="eyebrow">How it works</div>
+      <h2>From inquiry to delivery in six stages</h2>
+    </div>
+    <div class="process" id="processHome"></div>
+  </div></section>
+
+  <section class="band tight" style="border-top:1px solid var(--line)"><div class="wrap">
+    <div class="head"><div class="eyebrow">Compliance &amp; standards</div><h2>Certified. Compliant. Trusted.</h2></div>
+    <div class="certs" id="certsHome"></div>
+  </div></section>
+</section>
+
+<!-- ABOUT -->
+<section class="page" data-page="about">
+  <div class="page-head"><div class="wrap">
+    <div class="crumbs"><a href="#home">Home</a> / About</div>
+    <h1>A trusted name in global chemical &amp; commodity trade</h1>
+    <p class="lede">Founded to make international chemical and commodity trade simpler for businesses everywhere.</p>
+  </div></div>
+  <section class="band"><div class="wrap split">
+    <div class="prose">
+      <p><strong>Maser Global Impex was founded with a single vision:</strong> to simplify international chemical and commodity trade for businesses worldwide. Over two decades we have built a network that spans Asia, Europe, the Middle East, Africa and the Americas.</p>
+      <p>Our team of trade professionals, regulatory experts and logistics specialists keeps every transaction moving, from first inquiry to final delivery. We don't just ship products. We build long-term partnerships.</p>
+      <p>From our base in <strong>Vancouver, BC, Canada</strong>, we work with buyers and sellers on both sides of the Pacific and beyond, with Pacific-gateway access through the Port of Vancouver.</p>
+    </div>
+    <div class="feature-list">
+      <div><h4>Global reach</h4><p>Established supply chains in 40+ countries with reliable last-mile delivery.</p></div>
+      <div><h4>Quality assured</h4><p>Testing, certification and third-party inspection on every shipment.</p></div>
+      <div><h4>Regulatory expertise</h4><p>Compliance with international trade law, REACH, GHS and local norms.</p></div>
+      <div><h4>Custom solutions</h4><p>Flexible packaging, private labelling and order consolidation.</p></div>
+    </div>
+  </div></section>
+  <div class="stats wrap" style="padding:0">
+    <div><b>20+</b><span>Years in trade</span></div>
+    <div><b>$250M+</b><span>Trade volume</span></div>
+    <div><b>1,200+</b><span>Clients served</span></div>
+    <div><b>40+</b><span>Countries</span></div>
+  </div>
+  <section class="band"><div class="wrap">
+    <div class="head"><div class="eyebrow">What sets us apart</div><h2>Four commitments behind every shipment</h2></div>
+    <div class="adv" id="advCards"></div>
+  </div></section>
+  <section class="band tight" style="border-top:1px solid var(--line)"><div class="wrap">
+    <div class="head"><div class="eyebrow">Certifications</div><h2>Operating to international standards</h2><p class="lede">Every shipment meets the regulatory requirements of its destination country.</p></div>
+    <div class="certs" id="certsAbout"></div>
+  </div></section>
+</section>
+
+<!-- PRODUCTS -->
+<section class="page" data-page="products">
+  <div class="page-head"><div class="wrap">
+    <div class="crumbs"><a href="#home">Home</a> / Products</div>
+    <h1>Our product range</h1>
+    <p class="lede">Specialty chemicals to bulk commodities, sourced to international standards. Use the filters or search for a specific product.</p>
+  </div></div>
+  <section class="band tight"><div class="wrap">
+    <div class="toolbar">
+      <div class="filters" id="prodFilters" role="group" aria-label="Filter by division"></div>
+      <div class="search"><input id="prodSearch" type="search" placeholder="Search e.g. kaolin, methanol…" aria-label="Search products"></div>
+    </div>
+    <div class="cat-grid" id="prodGrid"></div>
+    <p class="note">HS codes shown are indicative 4–6 digit headings for reference. Final classification is confirmed per shipment and destination.</p>
+  </div></section>
+  <div class="cta-band"><div class="wrap">
+    <div><h2>Need something not listed?</h2><p>We source 500+ product categories. Send your specification and we'll find it.</p></div>
+    <div class="hero-actions"><a class="btn primary" href="#contact">Request product list</a><a class="btn ghost" data-wa-link target="_blank" rel="noopener">WhatsApp us</a></div>
+  </div></div>
+</section>
+
+<!-- SERVICES -->
+<section class="page" data-page="services">
+  <div class="page-head"><div class="wrap">
+    <div class="crumbs"><a href="#home">Home</a> / Services</div>
+    <h1>End-to-end trade services</h1>
+    <p class="lede">We manage every step of the international trade process so your business can focus on growth.</p>
+  </div></div>
+  <section class="band"><div class="wrap">
+    <div class="svc-grid" id="svcGrid"></div>
+  </div></section>
+  <section class="band" style="background:var(--surface);border-block:1px solid var(--line)"><div class="wrap">
+    <div class="head"><div class="eyebrow">Our trade process</div><h2>A transparent process with no surprises</h2></div>
+    <div class="process" id="processSvc"></div>
+  </div></section>
+  <section class="band tight"><div class="wrap split">
+    <div class="head" style="margin:0"><div class="eyebrow">Commercial terms</div><h2>Payment &amp; shipping terms we work with</h2></div>
+    <div class="prose">
+      <p><strong>Payment:</strong> Letter of Credit (L/C), Documents against Payment (D/P), Telegraphic Transfer (T/T), and negotiated terms for established clients.</p>
+      <div class="terms"><span class="chip">L/C</span><span class="chip">D/P</span><span class="chip">T/T</span><span class="chip">Credit insurance</span></div>
+      <p><strong>Shipping:</strong> FCL, LCL and bulk cargo by sea; air freight for urgent orders; multimodal where it saves time or cost.</p>
+      <div class="terms"><span class="chip">FOB</span><span class="chip">CFR</span><span class="chip">CIF</span><span class="chip">DAP</span><span class="chip">FCL / LCL</span><span class="chip">Bulk</span></div>
+    </div>
+  </div></section>
+</section>
+
+<!-- MARKETS -->
+<section class="page" data-page="markets">
+  <div class="page-head"><div class="wrap">
+    <div class="crumbs"><a href="#home">Home</a> / Markets</div>
+    <h1>Markets we serve</h1>
+    <p class="lede">Active trade relationships across five continents, with regional expertise and local compliance knowledge.</p>
+  </div></div>
+  <section class="band"><div class="wrap">
+    <div class="hub">
+      <div class="prose">
+        <div class="eyebrow">Typical transit times</div>
+        <p><strong>Sea freight runs 15–45 days</strong> depending on destination. Air freight runs 3–7 days at premium cost. Exact timelines are confirmed with every order.</p>
+      </div>
+      <div class="lanes" id="lanes"></div>
+    </div>
+    <div class="mkt-grid" id="mktGrid"></div>
+    <p class="note">Don't see your country? Ask us. We very likely have connections there.</p>
+  </div></section>
+</section>
+
+<!-- FAQ -->
+<section class="page" data-page="faq">
+  <div class="page-head"><div class="wrap">
+    <div class="crumbs"><a href="#home">Home</a> / FAQ</div>
+    <h1>Frequently asked questions</h1>
+    <p class="lede">Everything you need to know about trading with Maser Global Impex.</p>
+  </div></div>
+  <section class="band tight"><div class="wrap">
+    <div class="faq-cats filters" id="faqFilters"></div>
+    <div class="faq" id="faqList"></div>
+    <div style="margin-top:36px" class="hero-actions"><a class="btn primary" href="#contact">Ask a different question</a><a class="btn wa" data-wa-link target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+  </div></section>
+</section>
+
+<!-- FOOD -->
+<section class="page food-page" data-page="food">
+  <div class="food-hero"><div class="wrap">
+    <div class="hero-copy">
+      <div class="crumbs"><a href="#home">Home</a> / Food &amp; Agri Commodities</div>
+      <div class="eyebrow food-eyebrow">Food &amp; Agri Commodities</div>
+      <h1>Food and Agri Commodities from India</h1>
+      <p class="food-sub">Premium Jaggery Powder · Organic and Traditional · For Canada and Worldwide</p>
+      <div class="hero-actions">
+        <a class="btn cane" href="#food-contact" data-scroll="foodContact">Request FOB price &amp; samples</a>
+        <a class="btn wa" data-wa-food target="_blank" rel="noopener">WhatsApp food sales</a>
+      </div>
+      <div class="chips"><span class="chip">Unrefined cane sugar</span><span class="chip">No added colour</span><span class="chip">No refined sugar</span><span class="chip">EN / FR labels</span></div>
+    </div>
+    <div class="pack-scene" aria-label="Retail packs of Organic and Brown Jaggery Powder" role="img">
+      <div class="pack organic">
+        <div class="face front"><div class="pk-band">ORGANIC</div><div class="pk-body"><small>MGI · Maser Global Impex</small><b>Organic Jaggery Powder</b><i>Poudre de jaggery biologique</i><span class="pk-wt">1 kg</span><small>Product of India · Produit de l'Inde</small></div></div>
+        <div class="face back"><div class="pk-band">NUTRITION FACTS · VALEUR NUTRITIVE</div><div class="pk-body"><span class="nf"></span><span class="nf"></span><span class="nf short"></span><span class="nf"></span><span class="nf short"></span><small>Imported by Maser Global Impex · Vancouver, BC</small></div></div>
+        <div class="face right"></div><div class="face left"></div><div class="face top"></div><div class="face bottom"></div>
+      </div>
+      <div class="pack brown">
+        <div class="face front"><div class="pk-band">TRADITIONAL</div><div class="pk-body"><small>MGI · Maser Global Impex</small><b>Brown Jaggery Powder</b><i>Poudre de jaggery brune</i><span class="pk-wt">2 kg</span><small>Product of India · Produit de l'Inde</small></div></div>
+        <div class="face back"><div class="pk-band">NUTRITION FACTS · VALEUR NUTRITIVE</div><div class="pk-body"><span class="nf"></span><span class="nf"></span><span class="nf short"></span><span class="nf"></span><span class="nf short"></span><small>Imported by Maser Global Impex · Vancouver, BC</small></div></div>
+        <div class="face right"></div><div class="face left"></div><div class="face top"></div><div class="face bottom"></div>
+      </div>
+      <div class="pack-shadow"></div>
+    </div>
+  </div></div>
+
+  <section class="band"><div class="wrap split">
+    <div class="prose">
+      <p>Maser Global Impex is a global trading company based in <strong>Vancouver, Canada</strong>. We have supplied chemicals and commodities across 40+ countries for over 20 years. We now bring the same sourcing, quality control and logistics to food.</p>
+      <p>Our first food product is <strong>jaggery powder</strong>, also called <em>gur</em>. It is unrefined cane sugar from India, made from sugarcane juice with no added colour and no refined sugar.</p>
+    </div>
+    <div class="uses">
+      <div class="use tilt"><b>Chai</b><span>Traditional sweetener for masala chai</span></div>
+      <div class="use tilt"><b>Baking</b><span>Rich, caramel-like flavour</span></div>
+      <div class="use tilt"><b>Cooking</b><span>Indian sweets and everyday dishes</span></div>
+      <div class="use tilt"><b>Natural sweetener</b><span>Unrefined alternative to white sugar</span></div>
+    </div>
+  </div></section>
+
+  <section class="band food-band"><div class="wrap">
+    <div class="head"><div class="eyebrow food-eyebrow">Our products</div><h2>Jaggery powder range</h2></div>
+    <div class="jag-grid">
+      <article class="jag tilt organic-c">
+        <div class="jag-top"><span class="code food-code">JP-01 · HS 1701.13</span><h3>Organic Jaggery Powder</h3><p>100% organic cane jaggery, in powder form.</p></div>
+        <dl>
+          <div><dt>Best for</dt><dd>Health food stores, baking, chai and organic retail</dd></div>
+          <div><dt>Retail packs</dt><dd class="mono">1 kg · 2 kg</dd></div>
+          <div><dt>Bulk</dt><dd>Bulk packs on request</dd></div>
+        </dl>
+        <button type="button" class="link-btn" data-food-pick="Organic Jaggery Powder">Ask for price &amp; samples →</button>
+      </article>
+      <article class="jag tilt brown-c">
+        <div class="jag-top"><span class="code food-code">JP-02 · HS 1701.13</span><h3>Brown Jaggery Powder</h3><p>Traditional brown jaggery, in powder form.</p></div>
+        <dl>
+          <div><dt>Best for</dt><dd>Indian cooking, sweets, daily use and food service</dd></div>
+          <div><dt>Retail packs</dt><dd class="mono">1 kg · 2 kg</dd></div>
+          <div><dt>Bulk</dt><dd>Bulk packs on request</dd></div>
+        </dl>
+        <button type="button" class="link-btn" data-food-pick="Brown Jaggery Powder">Ask for price &amp; samples →</button>
+      </article>
+      <article class="jag soon">
+        <div class="jag-top"><span class="code food-code">JP-03</span><h3>More varieties coming</h3><p>A third jaggery powder joins the range soon. Ask us about upcoming food and agri products from India.</p></div>
+      </article>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap split">
+    <div>
+      <div class="head" style="margin-bottom:24px"><div class="eyebrow food-eyebrow">Quality &amp; food safety</div><h2>Built for Canadian shelves</h2></div>
+      <ul class="checks">
+        <li>Sourced directly from India</li>
+        <li>Lab tested for purity</li>
+        <li>Moisture-proof, food-grade packing</li>
+        <li>Bilingual English and French labelling for Canada</li>
+        <li>Nutrition Facts table as per Canadian rules</li>
+      </ul>
+    </div>
+    <div>
+      <div class="head" style="margin-bottom:24px"><div class="eyebrow food-eyebrow">Packing</div><h2>Retail and bulk formats</h2></div>
+      <div class="pack-opts">
+        <div class="tilt"><span class="code food-code">Retail</span><b class="mono">1 kg · 2 kg</b><p>Display-ready packs for Costco, Amazon and grocery.</p></div>
+        <div class="tilt"><span class="code food-code">Bulk</span><b class="mono">On request</b><p>Bulk packs for food service and manufacturers.</p></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="band tight food-band"><div class="wrap">
+    <div class="head"><div class="eyebrow food-eyebrow">Who we supply</div><h2>Buyers in Canada and the USA</h2></div>
+    <div class="buyers">
+      <span>Retail chains</span><span>Grocery stores</span><span>Ethnic food stores</span><span>Amazon sellers</span><span>Food service</span><span>Bakeries</span><span>Distributors</span>
+    </div>
+  </div></section>
+
+  <section class="band" id="foodContact"><div class="wrap contact-grid">
+    <div>
+      <div class="head" style="margin-bottom:24px"><div class="eyebrow food-eyebrow">Contact for food orders</div><h2>Request FOB price, MOQ, samples and lab reports</h2></div>
+      <dl class="info">
+        <div><dt>Email</dt><dd><span>info@maserglobalimpex.com</span><button class="copy" data-copy="info@maserglobalimpex.com">Copy</button></dd></div>
+        <div><dt>Phone / WhatsApp</dt><dd><span class="mono" data-wa-display></span><button class="copy" data-copy-wa>Copy</button></dd></div>
+        <div><dt>Website</dt><dd>maserglobalimpex.com/food</dd></div>
+        <div><dt>Location</dt><dd>Vancouver, BC, Canada</dd></div>
+      </dl>
+    </div>
+    <form class="quote" id="foodForm" novalidate>
+      <h3>Food order inquiry</h3>
+      <div class="field"><label for="ff-name">Your name</label><input id="ff-name" required placeholder=" "></div>
+      <div class="field"><label for="ff-company">Company / store</label><input id="ff-company" placeholder=" "></div>
+      <div class="field"><label for="ff-email">Email</label><input id="ff-email" type="email" required placeholder=" "></div>
+      <div class="field"><label for="ff-country">Country</label><select id="ff-country"><option>Canada</option><option>USA</option><option>Other</option></select></div>
+      <div class="field"><label for="ff-product">Product</label><select id="ff-product"><option>Organic Jaggery Powder</option><option>Brown Jaggery Powder</option><option>Both</option></select></div>
+      <div class="field"><label for="ff-pack">Pack size</label><select id="ff-pack"><option>1 kg retail</option><option>2 kg retail</option><option>Bulk</option><option>Mixed</option></select></div>
+      <fieldset class="field full needs"><legend>I'd like</legend>
+        <label><input type="checkbox" id="fn-fob" value="FOB price" checked> FOB price</label>
+        <label><input type="checkbox" id="fn-moq" value="MOQ" checked> MOQ</label>
+        <label><input type="checkbox" id="fn-sample" value="Samples"> Samples</label>
+        <label><input type="checkbox" id="fn-lab" value="Lab reports"> Lab reports</label>
+      </fieldset>
+      <div class="field full"><label for="ff-msg">Notes <small>(volume, buyer type, timeline)</small></label><textarea id="ff-msg" rows="4" placeholder=" "></textarea></div>
+      <div class="err" id="foodErr" hidden></div>
+      <div class="full"><button class="btn cane" type="submit">Prepare inquiry →</button></div>
+      <div class="form-result" id="foodResult" hidden>
+        <b>Your inquiry is ready. Send it on WhatsApp or email it to info@maserglobalimpex.com.</b>
+        <pre id="foodPreview"></pre>
+        <div class="form-actions"><a class="btn wa" id="foodWa" target="_blank" rel="noopener">Send on WhatsApp</a><button class="btn ghost" type="button" id="foodCopy">Copy inquiry text</button></div>
+      </div>
+    </form>
+  </div></section>
+</section>
+
+<!-- CONTACT -->
+<section class="page" data-page="contact">
+  <div class="page-head"><div class="wrap">
+    <div class="crumbs"><a href="#home">Home</a> / Contact</div>
+    <h1>Let's start a conversation</h1>
+    <p class="lede">Have a product requirement or a sourcing challenge? Our team will assign a dedicated account manager to your inquiry.</p>
+  </div></div>
+  <section class="band"><div class="wrap contact-grid">
+    <dl class="info">
+      <div><dt>Head office</dt><dd>Vancouver, BC, Canada</dd></div>
+      <div><dt>Email</dt><dd><span id="emailText">info@maserglobalimpex.com</span><button class="copy" data-copy="info@maserglobalimpex.com">Copy</button></dd></div>
+      <div><dt>Phone / WhatsApp</dt><dd><span class="mono" data-wa-display></span><button class="copy" data-copy-wa>Copy</button></dd></div>
+      <div><dt>Business hours</dt><dd>Mon – Sat, 9:00 AM – 6:30 PM PT</dd></div>
+      <div><dt>Response time</dt><dd>Within 48 hours, usually same day</dd></div>
+      <div style="border:0;padding-top:22px"><a class="btn wa" data-wa-link target="_blank" rel="noopener">Chat on WhatsApp →</a></div>
+    </dl>
+    <form class="quote" id="quoteForm" novalidate>
+      <h3>Request a quote</h3>
+      <div class="field"><label for="f-name">Your name</label><input id="f-name" required placeholder=" "></div>
+      <div class="field"><label for="f-company">Company</label><input id="f-company" placeholder=" "></div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" required placeholder=" "></div>
+      <div class="field"><label for="f-phone">Phone / WhatsApp</label><input id="f-phone" type="tel" placeholder=" "></div>
+      <div class="field"><label for="f-cat">Product category</label><select id="f-cat" required></select></div>
+      <div class="field"><label for="f-dest">Destination country</label><input id="f-dest" placeholder=" "></div>
+      <div class="field"><label for="f-qty">Quantity <small>(e.g. 20 MT)</small></label><input id="f-qty" placeholder=" "></div>
+      <div class="field"><label for="f-term">Preferred incoterm</label><select id="f-term"><option>Not sure</option><option>FOB</option><option>CFR</option><option>CIF</option><option>DAP</option></select></div>
+      <div class="field full"><label for="f-msg">Your requirement</label><textarea id="f-msg" required placeholder=" " rows="5"></textarea></div>
+      <div class="err" id="formErr" hidden></div>
+      <div class="full"><button class="btn primary" type="submit">Prepare inquiry →</button></div>
+      <div class="form-result" id="formResult" hidden>
+        <b>Your inquiry is ready. Send it to us on WhatsApp or by email.</b>
+        <pre id="formPreview"></pre>
+        <div class="form-actions">
+          <a class="btn wa" id="formWa" target="_blank" rel="noopener">Send on WhatsApp</a>
+          <button class="btn ghost" type="button" id="formCopy">Copy inquiry text</button>
+        </div>
+      </div>
+    </form>
+  </div></section>
+</section>
+</main>
+
+<footer class="site"><div class="wrap">
+  <div class="foot-grid">
+    <div>
+      <a class="logo" href="#home"><span class="logo-mark">MGI</span><span class="logo-text"><b>Maser Global Impex</b><small>International Trade Solutions</small></span></a>
+      <p>Your reliable partner for global chemical, mineral, petrochemical and commodity trade. Bridging markets, delivering value.</p>
+    </div>
+    <div><h5>Products</h5><ul id="footProducts"></ul></div>
+    <div><h5>Company</h5><ul>
+      <li><a href="#food">Food &amp; Agri</a></li><li><a href="#about">About us</a></li><li><a href="#services">Services</a></li><li><a href="#markets">Markets</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li>
+    </ul></div>
+    <div><h5>Contact</h5><ul>
+      <li>Vancouver, BC, Canada</li><li>info@maserglobalimpex.com</li><li class="mono" data-wa-display></li><li>Mon–Sat · 9:00–6:30 PT</li>
+    </ul></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Maser Global Impex. All rights reserved.</span><span>ISO 9001:2015 · REACH · GHS · IMDG</span></div>
+</div></footer>
+
+<a class="wa-float" data-wa-link target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+  <span>Chat with us</span>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ===== Edit contact number here (digits only, with country code) ===== */
+const WA_NUMBER = "16479992705";
+const WA_DISPLAY = "+1 (647) 999-2705";
+const WA_TEXT = "Hi Maser Global Impex, I am interested in your products.";
+
+const waUrl = t => "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(t || WA_TEXT);
+
+const PRODUCTS = [
+  {id:"chemicals", code:"CH-01", name:"Chemicals", blurb:"Adhesives, agrochemicals, reagents and more, sourced globally and quality-assured.",
+   items:[["Adhesives & Sealants","3506"],["Agrochemicals & Pesticides","3808"],["Catalysts & Auxiliary Agents","3815"],["Chemical Reagents","3822"],["Coatings & Varnishes","3209"],["Dyestuffs & Colorants","3204"],["Explosives & Propellants","3602"],["Fine Chemicals","29"],["Flavour & Fragrance","3302"]]},
+  {id:"specialty", code:"SC-02", name:"Specialty Chemicals", blurb:"Food, feed, pharma and polymer chemistry for regulated industries.",
+   items:[["Food Additives & Preservatives","2106"],["Feed Additives (Animal Nutrition)","2309"],["Inorganic Chemicals","28"],["Organic Chemicals","29"],["Pharmaceutical Chemicals","2941"],["Lab Supplies & Reagents","3822"],["Pigments & Toners","3206"],["Polymers & Resins","39"],["Printing Oils & Inks","3215"]]},
+  {id:"paints", code:"PC-03", name:"Paints & Coatings", blurb:"Protective and decorative coatings for industrial, marine and architectural use.",
+   items:[["Industrial Paints","3208"],["Marine Coatings","3208"],["Anti-corrosion Coatings","3208"],["Architectural Paints","3209"],["Epoxy Coatings","3907"],["Powder Coatings","3208"],["UV-Curable Coatings","3208"],["Decorative Finishes","3210"]]},
+  {id:"minerals", code:"MM-04", name:"Minerals & Metallurgy", blurb:"Industrial minerals, ores and metals for manufacturing and construction.",
+   items:[["Industrial Minerals (Silica, Kaolin)","2507"],["Sulphur & Sulphur Compounds","2503"],["Iron Ore & Steel Scrap","2601"],["Copper & Aluminium Alloys","7403"],["Zinc & Nickel Products","7901"],["Bauxite & Alumina","2606"],["Chrome Ore & Ferrochrome","2610"],["Titanium & Rare Earth Elements","2614"],["Graphite & Carbon Products","2504"]]},
+  {id:"petro", code:"PE-05", name:"Petrochemicals", blurb:"Refined petrochemicals and petroleum derivatives in bulk and container loads.",
+   items:[["Base Oils & Lubricants","2710"],["Naphtha & Solvents","2710"],["Benzene, Toluene, Xylene","2902"],["Paraffin Wax","2712"],["Bitumen & Asphalt","2713"],["Methanol & Ethanol","2905"],["Polypropylene & Polyethylene","3901"],["Petroleum Coke","2713"]]},
+  {id:"oils", code:"EO-06", name:"Edible & Cooking Oils", blurb:"Refined edible oils for food manufacturers, distributors and HoReCa.",
+   items:[["Palm Oil & RBD Palm Olein","1511"],["Soybean Oil (Refined)","1507"],["Sunflower Oil","1512"],["Canola / Rapeseed Oil","1514"],["Coconut Oil","1513"],["Groundnut (Peanut) Oil","1508"],["Corn (Maize) Oil","1515"],["Rice Bran Oil","1515"]]}
+];
+
+const SERVICES = [
+  ["SRC","Global sourcing","Vetted manufacturers and suppliers across China, India, Europe, the US and Southeast Asia, with competitive pricing on bulk orders."],
+  ["QC","Quality inspection","Pre-shipment inspection, third-party lab testing, COA verification and full documentation on every order."],
+  ["LOG","Logistics & freight","Sea, air and multimodal freight. IMDG-compliant dangerous goods handling. FCL, LCL and bulk cargo."],
+  ["DOC","Documentation & compliance","L/C, D/P and T/T terms. MSDS, COO, phytosanitary and health certificates, all managed in-house."],
+  ["PKG","Custom packaging","Private labelling, re-packing into your specified containers, and consolidation of mixed-commodity shipments."],
+  ["REG","Regulatory advisory","Country-specific import rules, REACH compliance, GHS labelling and HS code classification guidance."],
+  ["FIN","Trade finance","Letters of Credit, deferred payment and credit insurance options for qualified buyers."],
+  ["MI","Market intelligence","Commodity price monitoring, market trend reports and supplier benchmarking for your procurement strategy."]
+];
+
+const ADV = [
+  ["Two decades of expertise","Our leadership brings 20+ years of hands-on chemical and commodity trade experience: market cycles, supplier dynamics and buyer needs."],
+  ["Verified supplier network","Every supplier passes due diligence, including factory audits, financial checks and quality certifications, before we represent them."],
+  ["Full transparency","From origin to destination you see your shipment status, documentation and compliance at every stage."],
+  ["Competitive pricing at scale","Volume relationships and direct manufacturer access let us beat local distributors without cutting quality."]
+];
+
+const CERTS = [
+  ["ISO 9001","Quality management certified for consistent delivery of products and services."],
+  ["REACH","Full EU REACH compliance for chemicals exported to European markets."],
+  ["GHS / SDS","Globally Harmonized System labels and Safety Data Sheets for all chemical products."],
+  ["IMDG","International Maritime Dangerous Goods compliance for hazardous cargo."]
+];
+
+const PROCESS = [
+  ["Inquiry","Share your product specification, quantity and destination."],
+  ["Quotation","We prepare a competitive, all-inclusive offer."],
+  ["Source & verify","Manufacturer selection, factory audit and quality pre-check."],
+  ["Order & pack","Production, custom packaging and pre-shipment inspection."],
+  ["Ship & document","Freight booking, documentation and customs clearance."],
+  ["Deliver & support","Tracking, delivery confirmation and after-sales support."]
+];
+
+const MARKETS = [
+  ["South Asia",["India","Bangladesh","Sri Lanka","Nepal","Pakistan"]],
+  ["Southeast Asia",["Vietnam","Thailand","Indonesia","Malaysia","Philippines"]],
+  ["East Asia",["China","Japan","South Korea","Taiwan"]],
+  ["Middle East",["UAE","Saudi Arabia","Qatar","Kuwait","Oman","Bahrain"]],
+  ["Africa",["Nigeria","Kenya","Egypt","South Africa","Tanzania"]],
+  ["North Africa",["Morocco","Algeria","Tunisia","Libya","Sudan"]],
+  ["Europe",["Germany","Netherlands","UK","Turkey","Poland"]],
+  ["Americas",["Canada","USA","Brazil","Mexico","Colombia","Argentina"]],
+  ["Central Asia",["Kazakhstan","Uzbekistan","Azerbaijan","Georgia"]],
+  ["Oceania",["Australia","New Zealand","Papua New Guinea"]]
+];
+
+const LANES = [["North America",15],["East Asia",18],["Southeast Asia",22],["Europe",30],["Middle East",32],["Africa",40]];
+
+const FAQ = [
+  ["Orders","What is your minimum order quantity (MOQ)?","MOQ varies by product. For bulk chemicals and oils it is typically 5–10 MT. For specialty chemicals, 500 kg minimum. For custom orders we can discuss flexible MOQs. Contact us with your product for exact details."],
+  ["Shipping","Do you handle hazardous goods shipping?","Yes. We are IMDG certified and handle dangerous goods with full compliance, including MSDS documentation, proper packaging, labelling and all certifications required for safe international transport."],
+  ["Payment","What payment terms do you offer?","We accept Letter of Credit (L/C), Documents against Payment (D/P), Telegraphic Transfer (T/T), and negotiated terms for established clients. We also work with trade finance providers for credit insurance and deferred payment."],
+  ["Shipping","How long does shipping typically take?","Sea freight takes 15–45 days depending on destination. Air freight takes 3–7 days at premium cost. We optimise for cost unless you request expedited shipping, and confirm exact timelines after order confirmation."],
+  ["Quality","Do you provide Certificates of Analysis (COA)?","Yes. Every shipment includes a COA from the manufacturer, plus third-party lab testing where applicable. We also provide MSDS, Certificate of Origin and all compliance documents your destination country requires."],
+  ["Shipping","Can you handle customs clearance?","Yes. We manage export documentation and coordinate with customs brokers on the import side. We handle HS codes and tariff classification so clearance goes smoothly."],
+  ["Orders","Do you offer private labelling or repackaging?","Yes. We provide custom packaging, private labelling, order consolidation and repackaging. Minimum quantities apply. Send us your branding and packaging specifications."],
+  ["Orders","What countries do you currently serve?","We have active trade relationships in 40+ countries across South, Southeast and East Asia, the Middle East, Africa, Europe and the Americas. If your destination isn't listed, ask us."],
+  ["Quality","How do you ensure product quality?","Pre-shipment inspection at the factory, third-party lab testing, COA verification and spot checks during logistics. Every batch is tracked from manufacturer to your warehouse."],
+  ["Quality","Can you help with regulatory compliance?","Yes. Our regulatory team provides country-specific guidance including REACH (EU), GHS labelling, import permits, phytosanitary and health certificates."],
+  ["Support","What if there's an issue with my order?","We follow a 48-hour response protocol. Quality disputes are resolved through third-party inspection, and we cover the cost of legitimate quality issues. We stand behind every shipment."],
+  ["Support","Can I speak to a sales person directly?","Yes. Contact us by email, phone or WhatsApp and we'll assign a dedicated account manager. We offer one-on-one consultation for enterprise clients and bulk orders."]
+];
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* WhatsApp wiring */
+document.querySelectorAll("[data-wa-link]").forEach(a => a.href = waUrl());
+document.querySelectorAll("[data-wa-display]").forEach(el => el.textContent = WA_DISPLAY);
+
+/* Copy helpers */
+function copyText(text, btn){
+  const done = () => { if(btn){ const o = btn.textContent; btn.textContent = "Copied"; setTimeout(() => btn.textContent = o, 1500); } };
+  try { navigator.clipboard.writeText(text).then(done).catch(() => fallback()); } catch(e){ fallback(); }
+  function fallback(){ const r = document.createRange(); const t = document.createElement("span"); t.textContent = text; document.body.appendChild(t); r.selectNodeContents(t); const s = getSelection(); s.removeAllRanges(); s.addRange(r); try{document.execCommand("copy")}catch(e){} t.remove(); done(); }
+}
+document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", () => copyText(b.dataset.copy, b)));
+document.querySelectorAll("[data-copy-wa]").forEach(b => b.addEventListener("click", () => copyText(WA_DISPLAY, b)));
+
+/* Home divisions */
+let activeFilter = "all";
+$("#homeDivisions").innerHTML = PRODUCTS.map(p => `
+  <button class="div-card tilt" data-go="${p.id}">
+    <span class="code">${p.code}</span>
+    <h3>${esc(p.name)}</h3>
+    <p>${esc(p.blurb)}</p>
+    <span class="more">${p.items.length} product lines →</span>
+  </button>`).join("");
+document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => { activeFilter = b.dataset.go; location.hash = "products"; renderProducts(); }));
+
+/* Lists */
+$("#advList").innerHTML = ADV.map(a => `<div><h4>${esc(a[0])}</h4><p>${esc(a[1])}</p></div>`).join("");
+$("#advCards").innerHTML = ADV.map(a => `<article class="tilt"><span class="code">Commitment</span><h3>${esc(a[0])}</h3><p>${esc(a[1])}</p></article>`).join("");
+const certHTML = CERTS.map(c => `<div class="cert tilt"><b>${esc(c[0])}</b><p>${esc(c[1])}</p></div>`).join("");
+$("#certsHome").innerHTML = certHTML; $("#certsAbout").innerHTML = certHTML;
+const procHTML = PROCESS.map((p,i) => `<div class="step"><span class="n">Stage ${i+1} / 6</span><h4>${esc(p[0])}</h4><p>${esc(p[1])}</p></div>`).join("");
+$("#processHome").innerHTML = procHTML; $("#processSvc").innerHTML = procHTML;
+$("#svcGrid").innerHTML = SERVICES.map(s => `<article class="svc tilt"><span class="tag">${s[0]}</span><h3>${esc(s[1])}</h3><p>${esc(s[2])}</p></article>`).join("");
+$("#mktGrid").innerHTML = MARKETS.map(m => `<article class="mkt tilt"><h3>${esc(m[0])}<span>${m[1].length} countries</span></h3><ul>${m[1].map(c => `<li>${esc(c)}</li>`).join("")}</ul></article>`).join("");
+$("#lanes").innerHTML = `<div class="lane mono" style="color:var(--muted)"><span>Sea lane</span><span></span><span>Days (approx.)</span></div>` +
+  LANES.map(l => `<div class="lane"><span>${l[0]}</span><span class="bar"><i style="width:${(l[1]/45*100).toFixed(0)}%"></i></span><span class="mono">~${l[1]}</span></div>`).join("");
+$("#footProducts").innerHTML = PRODUCTS.map(p => `<li><a href="#products" data-foot="${p.id}">${esc(p.name)}</a></li>`).join("");
+document.querySelectorAll("[data-foot]").forEach(a => a.addEventListener("click", () => { activeFilter = a.dataset.foot; renderProducts(); }));
+
+/* Products page */
+function renderFilters(){
+  $("#prodFilters").innerHTML = [["all","All divisions"], ...PRODUCTS.map(p => [p.id, p.name])]
+    .map(f => `<button type="button" data-f="${f[0]}" aria-pressed="${activeFilter===f[0]}">${esc(f[1])}</button>`).join("");
+  document.querySelectorAll("[data-f]").forEach(b => b.addEventListener("click", () => { activeFilter = b.dataset.f; renderProducts(); }));
+}
+function renderProducts(){
+  renderFilters();
+  const q = $("#prodSearch").value.trim().toLowerCase();
+  const hl = t => { if(!q) return esc(t); const i = t.toLowerCase().indexOf(q); return i < 0 ? esc(t) : esc(t.slice(0,i)) + "<mark>" + esc(t.slice(i,i+q.length)) + "</mark>" + esc(t.slice(i+q.length)); };
+  const cats = PRODUCTS.filter(p => activeFilter === "all" || p.id === activeFilter)
+    .map(p => ({...p, shown: q ? p.items.filter(it => it[0].toLowerCase().includes(q)) : p.items}))
+    .filter(p => p.shown.length);
+  $("#prodGrid").innerHTML = cats.length ? cats.map(p => `
+    <article class="cat tilt">
+      <header><span class="code">${p.code}</span><h3>${esc(p.name)}</h3><p>${esc(p.blurb)}</p></header>
+      <ul>${p.shown.map(it => `<li><span>${hl(it[0])}</span><span class="mono">HS ${it[1]}</span></li>`).join("")}</ul>
+      <footer><button type="button" data-quote="${esc(p.name)}">Request a quote for ${esc(p.name)} →</button></footer>
+    </article>`).join("") : `<div class="empty">No products match “${esc(q)}”. We source 500+ categories, so <a href="#contact">send us your requirement</a>.</div>`;
+  document.querySelectorAll("[data-quote]").forEach(b => b.addEventListener("click", () => { $("#f-cat").value = b.dataset.quote; location.hash = "contact"; }));
+}
+$("#prodSearch").addEventListener("input", renderProducts);
+
+/* FAQ */
+let faqCat = "All";
+function renderFaq(){
+  const cats = ["All", ...new Set(FAQ.map(f => f[0]))];
+  $("#faqFilters").innerHTML = cats.map(c => `<button type="button" data-fc="${c}" aria-pressed="${faqCat===c}">${c}</button>`).join("");
+  document.querySelectorAll("[data-fc]").forEach(b => b.addEventListener("click", () => { faqCat = b.dataset.fc; renderFaq(); }));
+  $("#faqList").innerHTML = FAQ.filter(f => faqCat === "All" || f[0] === faqCat)
+    .map((f,i) => `<details${i===0?" open":""}><summary>${esc(f[1])}</summary><p>${esc(f[2])}</p></details>`).join("");
+}
+renderFaq();
+
+/* Quote form */
+$("#f-cat").innerHTML = `<option value="">Select a category…</option>` + PRODUCTS.map(p => `<option>${esc(p.name)}</option>`).join("") + `<option>Other / multiple categories</option>`;
+$("#quoteForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const v = id => $("#"+id).value.trim();
+  const missing = [];
+  if(!v("f-name")) missing.push("your name");
+  if(!v("f-email") || !$("#f-email").checkValidity()) missing.push("a valid email");
+  if(!v("f-cat")) missing.push("a product category");
+  if(!v("f-msg")) missing.push("your requirement");
+  const err = $("#formErr");
+  if(missing.length){ err.textContent = "Please add " + missing.join(", ") + "."; err.hidden = false; $("#formResult").hidden = true; return; }
+  err.hidden = true;
+  const opt = (label, id) => v(id) ? label + ": " + v(id) : null;
+  const text = [
+    "Quote request — Maser Global Impex",
+    "Name: " + v("f-name"),
+    opt("Company","f-company"),
+    "Email: " + v("f-email"),
+    opt("Phone","f-phone"),
+    "Category: " + v("f-cat"),
+    opt("Destination","f-dest"),
+    opt("Quantity","f-qty"),
+    "Incoterm: " + v("f-term"),
+    "",
+    "Requirement: " + v("f-msg")
+  ].filter(x => x !== null).join("\n");
+  $("#formPreview").textContent = text;
+  $("#formWa").href = waUrl(text);
+  $("#formResult").hidden = false;
+  $("#formCopy").onclick = () => copyText(text, $("#formCopy"));
+});
+
+/* ===== Food page ===== */
+const FOOD_WA_TEXT = "Hi Maser Global Impex, I'm interested in your jaggery powder. Please share FOB price, MOQ and samples.";
+document.querySelectorAll("[data-wa-food]").forEach(a => a.href = waUrl(FOOD_WA_TEXT));
+document.querySelectorAll("[data-scroll]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); document.getElementById(a.dataset.scroll).scrollIntoView({behavior:"smooth"}); }));
+document.querySelectorAll("[data-food-pick]").forEach(b => b.addEventListener("click", () => { $("#ff-product").value = b.dataset.foodPick; $("#foodContact").scrollIntoView({behavior:"smooth"}); }));
+$("#foodForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const v = id => $("#"+id).value.trim();
+  const missing = [];
+  if(!v("ff-name")) missing.push("your name");
+  if(!v("ff-email") || !$("#ff-email").checkValidity()) missing.push("a valid email");
+  const err = $("#foodErr");
+  if(missing.length){ err.textContent = "Please add " + missing.join(" and ") + "."; err.hidden = false; $("#foodResult").hidden = true; return; }
+  err.hidden = true;
+  const needs = ["fn-fob","fn-moq","fn-sample","fn-lab"].filter(id => $("#"+id).checked).map(id => $("#"+id).value);
+  const text = [
+    "Food order inquiry — Maser Global Impex",
+    "Name: " + v("ff-name"),
+    v("ff-company") ? "Company: " + v("ff-company") : null,
+    "Email: " + v("ff-email"),
+    "Country: " + v("ff-country"),
+    "Product: " + v("ff-product"),
+    "Pack size: " + v("ff-pack"),
+    needs.length ? "Requesting: " + needs.join(", ") : null,
+    v("ff-msg") ? "\nNotes: " + v("ff-msg") : null
+  ].filter(x => x !== null).join("\n");
+  $("#foodPreview").textContent = text;
+  $("#foodWa").href = waUrl(text);
+  $("#foodResult").hidden = false;
+  $("#foodCopy").onclick = () => copyText(text, $("#foodCopy"));
+});
+
+/* ===== 3D card tilt (mouse only) ===== */
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let tiltEl = null;
+function resetTilt(){ if(tiltEl){ tiltEl.style.transform = ""; tiltEl.classList.remove("tilting"); tiltEl = null; } }
+if(!reduceMotion){
+  document.addEventListener("pointermove", e => {
+    if(e.pointerType !== "mouse") return;
+    const el = e.target.closest(".tilt");
+    if(el !== tiltEl) resetTilt();
+    if(!el) return;
+    tiltEl = el; el.classList.add("tilting");
+    const r = el.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    el.style.transform = `perspective(900px) rotateX(${(-y*7).toFixed(2)}deg) rotateY(${(x*9).toFixed(2)}deg) translateZ(6px)`;
+  });
+  document.addEventListener("pointerleave", resetTilt);
+}
+
+/* ===== 3D globe ===== */
+const Globe = (() => {
+  if(!window.THREE) return null;
+  const canvas = $("#globe"), stage = $("#heroStage");
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true}); } catch(e){ canvas.hidden = true; return null; }
+  renderer.setPixelRatio(Math.min(2, devicePixelRatio || 1));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(32, 1, .1, 100);
+  camera.position.set(0, 0, 8.4);
+  const R = 2;
+  const world = new THREE.Group(); scene.add(world);
+  world.rotation.x = .38;
+
+  const tok = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const ll = (lat, lon, r = R) => {
+    const p = (90 - lat) * Math.PI/180, t = (lon + 180) * Math.PI/180;
+    return new THREE.Vector3(-r*Math.sin(p)*Math.cos(t), r*Math.cos(p), r*Math.sin(p)*Math.sin(t));
+  };
+
+  // occluding core + atmosphere ring
+  const coreMat = new THREE.MeshBasicMaterial({});
+  world.add(new THREE.Mesh(new THREE.SphereGeometry(R*.985, 64, 64), coreMat));
+
+  // dotted sphere (fibonacci lattice)
+  const N = 2600, pos = new Float32Array(N*3);
+  for(let i = 0; i < N; i++){
+    const y = 1 - (i/(N-1))*2, rad = Math.sqrt(1 - y*y), th = i * 2.39996323;
+    pos[i*3] = Math.cos(th)*rad*R; pos[i*3+1] = y*R; pos[i*3+2] = Math.sin(th)*rad*R;
+  }
+  const dotGeo = new THREE.BufferGeometry(); dotGeo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+  const dotMat = new THREE.PointsMaterial({size:.028, transparent:true, opacity:.55});
+  world.add(new THREE.Points(dotGeo, dotMat));
+
+  // latitude rings
+  const ringMat = new THREE.LineBasicMaterial({transparent:true, opacity:.18});
+  [-60,-30,0,30,60].forEach(lat => {
+    const pts = []; for(let lon = -180; lon <= 180; lon += 4) pts.push(ll(lat, lon, R*1.002));
+    world.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), ringMat));
+  });
+
+  // routes from Vancouver
+  const HUB = [49.28, -123.12];
+  const PORTS = [[23.02,72.57],[31.23,121.47],[25.2,55.27],[51.92,4.48],[6.45,3.39],[-23.96,-46.33],[-33.87,151.21],[1.29,103.85],[29.76,-95.37],[35.68,139.69],[-26.2,28.04],[41.0,28.97]];
+  const laneMat = new THREE.LineBasicMaterial({transparent:true, opacity:.85});
+  const hubMat = new THREE.MeshBasicMaterial({}), portMat = new THREE.MeshBasicMaterial({}), shipMat = new THREE.MeshBasicMaterial({});
+  const a = ll(...HUB);
+  const hub = new THREE.Mesh(new THREE.SphereGeometry(.07, 16, 16), hubMat); hub.position.copy(a); world.add(hub);
+  const halo = new THREE.Mesh(new THREE.RingGeometry(.1, .14, 32), new THREE.MeshBasicMaterial({transparent:true, opacity:.6, side:THREE.DoubleSide}));
+  halo.position.copy(a.clone().multiplyScalar(1.01)); halo.lookAt(a.clone().multiplyScalar(2)); world.add(halo);
+  const ships = PORTS.map((pt, i) => {
+    const b = ll(...pt);
+    const mid = a.clone().add(b);
+    if(mid.length() < .01) mid.set(0, 1, 0);
+    mid.normalize().multiplyScalar(R + a.distanceTo(b) * .32);
+    const curve = new THREE.QuadraticBezierCurve3(a, mid, b);
+    world.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(curve.getPoints(80)), laneMat));
+    const port = new THREE.Mesh(new THREE.SphereGeometry(.035, 12, 12), portMat); port.position.copy(b); world.add(port);
+    const ship = new THREE.Mesh(new THREE.SphereGeometry(.03, 10, 10), shipMat); world.add(ship);
+    return {curve, ship, t: i / PORTS.length, speed: .0016 + (i % 4) * .0004};
+  });
+
+  function paint(){
+    coreMat.color.set(tok("--wash") || "#E3EBE9");
+    dotMat.color.set(tok("--muted") || "#55666B");
+    ringMat.color.set(tok("--teal") || "#0C6466");
+    laneMat.color.set(tok("--teal") || "#0C6466");
+    portMat.color.set(tok("--teal") || "#0C6466");
+    shipMat.color.set(tok("--ink") || "#0D1E24");
+    hubMat.color.set(tok("--amber") || "#B9780F");
+    halo.material.color.set(tok("--amber") || "#B9780F");
+  }
+  paint();
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { paint(); once(); });
+  new MutationObserver(() => { paint(); once(); }).observe(document.documentElement, {attributes:true, attributeFilter:["data-theme"]});
+
+  function size(){
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    if(!w || !h) return;
+    renderer.setSize(w, h, false); camera.aspect = w/h;
+    camera.position.z = w/h < 1 ? 8.4 / (w/h) * .85 : 8.4;
+    camera.updateProjectionMatrix();
+  }
+  new ResizeObserver(() => { size(); once(); }).observe(stage);
+
+  // drag to spin
+  let dragging = false, lx = 0, vel = .0018;
+  world.rotation.y = 4.1;
+  canvas.addEventListener("pointerdown", e => { dragging = true; lx = e.clientX; canvas.setPointerCapture(e.pointerId); });
+  canvas.addEventListener("pointermove", e => { if(!dragging) return; const dx = e.clientX - lx; lx = e.clientX; world.rotation.y += dx * .008; vel = dx * .0006; once(); });
+  canvas.addEventListener("pointerup", () => { dragging = false; });
+
+  function once(){ renderer.render(scene, camera); }
+  let running = false;
+  function frame(){
+    if(!running) return;
+    if(!dragging){ vel += (.0018 - vel) * .02; world.rotation.y += vel; }
+    ships.forEach(s => { s.t = (s.t + s.speed) % 1; s.ship.position.copy(s.curve.getPoint(s.t)); });
+    halo.scale.setScalar(1 + .25 * Math.sin(performance.now() / 500));
+    once(); requestAnimationFrame(frame);
+  }
+  ships.forEach(s => s.ship.position.copy(s.curve.getPoint(s.t)));
+  size(); once();
+  return {
+    play(){ if(reduceMotion){ size(); once(); return; } if(!running){ running = true; size(); requestAnimationFrame(frame); } },
+    pause(){ running = false; }
+  };
+})();
+if(!Globe){ const st = $("#heroStage"); st.style.minHeight = "0"; const m = st.querySelector(".manifest"); m.style.position = "relative"; }
+
+/* Router */
+const ON_FOOD_PATH = /\/food\/?$/.test(location.pathname);
+if(ON_FOOD_PATH){ document.querySelectorAll('a[href^="#"]').forEach(a => { const h = a.getAttribute("href"); if(h !== "#food") a.setAttribute("href", "/" + h); else a.setAttribute("href", "/food/"); }); }
+const PAGES = ["home","food","about","products","services","markets","faq","contact"];
+function route(){
+  const h = location.hash.replace("#","");
+  const page = PAGES.includes(h) ? h : (ON_FOOD_PATH ? "food" : "home");
+  document.querySelectorAll(".page").forEach(p => p.classList.toggle("active", p.dataset.page === page));
+  document.querySelectorAll("nav.main a").forEach(a => { if(a.getAttribute("href") === "#"+page) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+  if(page === "products") renderProducts();
+  if(Globe){ page === "home" ? Globe.play() : Globe.pause(); }
+  resetTilt();
+  $("#mainNav").classList.remove("open"); $("#menuBtn").setAttribute("aria-expanded","false");
+  window.scrollTo({top:0});
+}
+addEventListener("hashchange", route);
+$("#menuBtn").addEventListener("click", () => { const o = $("#mainNav").classList.toggle("open"); $("#menuBtn").setAttribute("aria-expanded", o); });
+route();
+</script>
+
+</body>
+</html>
